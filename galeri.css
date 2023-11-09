@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(resimler/arka-plan.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Navbar Başlangıç */
+  .navbar {
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #e74c3c;
+  }
+  
+  /* Navbar Bitiş */
+
+
+
+/* Galeri Yapımı Başlangıç */
+
+.container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x:hidden ;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25) ;
+}
+
+.slider img{
+    flex: 1 0 100%;     
+    scroll-snap-align:start ;
+    object-fit: center;
+    
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+    
+}
+
+/* Galeri Yapımı Bitiş */
+
+/* Buton */
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    left: 65%;
+    top: 7px;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+   /* Footer */
+
+.footer{
+  background: transparent;
+  
+}
+
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px; 
+}
+
+.socialIcons{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #111e2e;
+  margin: 10px;
+  border-radius: 50%;
+  
+}
+
+
+.socialIcons a i{
+  
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+  
+}
+
+/* Hover Efekti */
+
+.socialIcons a:hover{
+  background-color: transparent;
+  transition: 0.5s;
+  
+}
+
+
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+  
+}
+
+.footerNav{
+  margin: 30px 0;
+  
+}
+
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+}
+
+.footerNav ul li a{
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: .7;
+  transition: 0.5s;
+}
+
+
+.footerNav ul li a:hover{
+  opacity: 1;
+  
+}
+
+.footerBottom{
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.footerBottom p{
+  color: white;
+  
+  
+}
+
+
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/* Footer */
+
+@media (max-width:700px) {
+  .footerNav ul{
+      flex-direction: column;
+  }
+
+  .footerNav ul li{
+      width:100% ;
+      text-align: center;
+      margin: 10px;
+  }
+
+}
+
+/* Ekran Genişliği 750px'de Navbar Ayarı */
+@media screen and (max-width: 750px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #000;
+    z-index: 1;
+  }
+
+  .nav-links.active li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Ekran Genişliği 850px'de Navbar Ayarı */
+@media screen and (max-width: 850px) {
+  .logo img {
+    width: 80px;
+  }
+}

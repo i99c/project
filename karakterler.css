@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  width: auto;
+  height: auto;
+  background-attachment: fixed;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(resimler/arka-plan.jpg) ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Navbar Başlangıç */
+.navbar {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #e74c3c;
+}
+
+/* Navbar Bitiş */
+/* CARD YAPISI BAŞLANGIÇ */
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 7.5rem;
+  padding-block: 10rem;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 428px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: auto;
+  background-color: #c2d2d2;
+  padding: 1.5rem 2 rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1.2rem;
+  position: relative;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  bottom: -7rem;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: 14px;
+  color: #4d5d7d;
+  margin-bottom: .25rem;
+  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.card__title {
+  font-size: 15px;
+  color: #940730;
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.card__button {
+  text-decoration: rgb(110, 20, 184);
+  font-size: var(--small-font-size);
+  /* Değişken tanımlanmamış */
+  font-weight: 500;
+  color: var(--first-color);
+  /* Değişken tanımlanmamış */
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  /* Düzelti: 1s 1s yerine sadece 1s kullanılmalı */
+  opacity: 1;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.D-Beneviento{
+  width: 250px;
+  border-radius: 20px;
+}
+
+.j-baker{
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* CARD YAPISI Bitiş */
+
+
+ /* Footer */
+
+ .footer{
+  background: transparent;
+  
+}
+
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px; 
+}
+
+.socialIcons{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #111e2e;
+  margin: 10px;
+  border-radius: 50%;
+  
+}
+
+
+.socialIcons a i{
+  
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+  
+}
+
+/* Hover Efekti */
+
+.socialIcons a:hover{
+  background-color: transparent;
+  transition: 0.5s;
+  
+}
+
+
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+  
+}
+
+.footerNav{
+  margin: 30px 0;
+  
+}
+
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+}
+
+.footerNav ul li a{
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: .7;
+  transition: 0.5s;
+}
+
+
+.footerNav ul li a:hover{
+  opacity: 1;
+  
+}
+
+.footerBottom{
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.footerBottom p{
+  color: white;
+  
+  
+}
+
+
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/* Footer */
+
+@media (max-width:700px) {
+  .footerNav ul{
+      flex-direction: column;
+  }
+
+  .footerNav ul li{
+      width:100% ;
+      text-align: center;
+      margin: 10px;
+  }
+
+}
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: hidden;
+  }
+}
+
+/* Ekran Genişliği 750px'de Navbar Ayarı */
+@media screen and (max-width: 750px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #000;
+    z-index: 1;
+  }
+
+  .nav-links.active li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Ekran Genişliği 850px'de Navbar Ayarı */
+@media screen and (max-width: 850px) {
+  .logo img {
+    width: 80px;
+  }
+  .card__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

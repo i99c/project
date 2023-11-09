@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: auto;
+    height: auto;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(resimler/arka-plan.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Navbar Başlangıç */
+  .navbar {
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #e74c3c;
+  }
+  
+  /* Navbar Bitiş */
+
+/* Contact Kısmı Başlangıç */
+h2 {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
+    font-family: 'Playfair Display SC', serif;
+}
+
+label {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.action {
+    width: 50px;
+    height: 50px;
+    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Unicase', serif;
+    font-family: 'Playfair Display SC', serif;
+} 
+
+form {
+    background: rgba(27, 31, 34, 0.88);
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 55px 30px;
+}
+
+form .title h2 {
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+
+form .half {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .half .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+}
+
+form .half .item input {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    font-size: 17px;
+}
+
+form .full {
+    margin-bottom: 24px;
+}
+
+form .full textarea {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+}
+
+form .action {
+    margin-bottom: 32px;
+    color: white;
+    display: flex;
+}
+
+
+
+form .action input {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+}
+
+form .action input[type="submit"] {
+    background-color: white;
+    color: black;
+}
+
+form .icons i {
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    width: 38px;
+    margin-right: 10px;
+}
+
+form .half .item input:focus,
+form .full textarea:focus,
+form .action input[type="RESET"]:hover,
+form .icons i:hover {
+    background: rgba(255, 255, 255, 0.075);
+}
+
+/* Contact Kısmı Bitiş */
+/* Sayfa Boyutu Yapımı */
+@media (max-widht: 800px) {
+    form .half {
+        flex-direction: column;
+    }
+}
+
+@media (max-widht: 650px) {
+    form .half {
+        flex-direction: column;
+    }
+}
+
+/* Sayfa Boyutu Yapımı */
+
+ /* Footer */
+
+ .footer{
+    background: transparent;
+    
+  }
+  
+  .footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px; 
+  }
+  
+  .socialIcons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #111e2e;
+    margin: 10px;
+    border-radius: 50%;
+    
+  }
+  
+  
+  .socialIcons a i{
+    
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+    
+  }
+  
+  /* Hover Efekti */
+  
+  .socialIcons a:hover{
+    background-color: transparent;
+    transition: 0.5s;
+    
+  }
+  
+  
+  .socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+    
+  }
+  
+  .footerNav{
+    margin: 30px 0;
+    
+  }
+  
+  
+  .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  
+  }
+  
+  .footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: .7;
+    transition: 0.5s;
+  }
+  
+  
+  .footerNav ul li a:hover{
+    opacity: 1;
+    
+  }
+  
+  .footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .footerBottom p{
+    color: white;
+    
+    
+  }
+  
+  
+  .designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+  /* Footer */
+  
+  @media (max-width:700px) {
+    .footerNav ul{
+        flex-direction: column;
+    }
+  
+    .footerNav ul li{
+        width:100% ;
+        text-align: center;
+        margin: 10px;
+    }
+  
+  }
+
+  /* Ekran Genişliği 750px'de Navbar Ayarı */
+@media screen and (max-width: 750px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #000;
+    z-index: 1;
+  }
+
+  .nav-links.active li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Ekran Genişliği 850px'de Navbar Ayarı */
+@media screen and (max-width: 850px) {
+  .logo img {
+    width: 80px;
+  }
+}
